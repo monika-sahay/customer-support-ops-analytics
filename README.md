@@ -64,23 +64,62 @@ This project loosely follows a structured analytics workflow:
 
 **Ask → Prepare → Process → Analyze → Share → Act**
 
-### Ask
-Define the business question and potential stakeholders.
+## Ask
+Problem: Support teams need faster and more consistent triage.
 
-### Prepare
-Collect the dataset and review its structure.
+Stakeholders:
+- support managers
+- operations leads
+- customer experience leadership
 
-### Process
-Clean and standardize the data to make it suitable for analysis.
+Goal:
+Identify drivers of urgency and develop insights that could support triage decisions.
 
-### Analyze
-Perform exploratory analysis to identify patterns and relationships.
+## Prepare
 
-### Share
-Create visualizations and summaries that communicate findings.
+Document:
+- data source (Kaggle dataset by Waseem AlAstal)
+- how the dataset was obtained
+- what columns are included
+- potential limitations
+- privacy and ethical considerations
 
-### Act
-Suggest possible operational improvements based on the insights.
+## Process
+Clean and standardize the dataset.
+
+Steps may include:
+- handling missing values
+- removing duplicate tickets
+- standardizing categorical labels
+- parsing timestamps
+- cleaning text fields
+
+## Analyze
+
+Perform exploratory data analysis following a structured EDA approach:
+- data familiarization
+- data quality assessment
+- feature engineering
+- descriptive EDA
+- hypothesis-driven exploration
+- validation checks
+- synthesis of insights
+
+## Share
+
+Communicate findings using:
+- visualizations
+- summary tables
+- an operational dashboard
+
+## Act
+
+Translate insights into operational recommendations such as:
+
+- improved ticket routing rules
+- staffing adjustments
+- automation opportunities
+- SLA monitoring improvements
 
 ---
 
@@ -105,7 +144,7 @@ These steps help ensure the dataset **can be analyzed more consistently and repr
 
 # Exploratory Data Analysis
 
-The exploratory analysis may investigate patterns such as:
+The exploratory analysis investigate patterns such as:
 
 - distribution of ticket priorities
 - ticket volume by issue category
@@ -113,7 +152,7 @@ The exploratory analysis may investigate patterns such as:
 - performance by communication channel
 - temporal patterns in ticket submissions
 
-Example visualizations may include:
+Example visualizations include:
 
 - ticket volume by priority
 - resolution time distributions
@@ -168,7 +207,7 @@ These models could potentially support early identification of complex tickets.
 
 # Dashboard
 
-An operational dashboard may be developed to visualize support performance.
+An operational dashboard is developed to visualize support performance.
 
 Possible dashboard sections include:
 
@@ -216,7 +255,7 @@ Visualization
 
 Dashboard
 
-- Streamlit or Tableau
+- React
 
 Development
 
@@ -227,3 +266,80 @@ Development
 ---
 
 # Repository Structure
+```
+customer-support-ops-analytics
+
+data
+    raw
+    processed
+
+notebooks
+    01_data_preparation.ipynb
+    02_exploratory_analysis.ipynb
+    03_modeling.ipynb
+
+src
+    preprocessing.py
+    feature_engineering.py
+    model_training.py
+
+dashboard
+    app.py
+
+outputs
+    figures
+    models
+
+```
+
+
+---
+
+# Potential Insights
+
+Examples of insights that may emerge from the analysis include:
+
+- certain issue categories could be associated with higher priority levels
+- some support channels may resolve tickets faster
+- certain ticket types may have higher escalation risk
+- resolution time may vary across categories and submission times
+
+These observations could help guide operational improvements.
+
+---
+
+# Possible Recommendations
+
+Based on the analysis, organizations may consider:
+
+1. developing automated triage rules for common high-risk tickets
+2. allocating support staff during peak submission periods
+3. creating specialized workflows for frequent high-priority issues
+4. monitoring categories that may be associated with SLA breaches
+
+These actions could potentially improve response times and customer experience.
+
+---
+
+# Future Work
+
+This project could be extended by exploring:
+
+- natural language processing of ticket descriptions
+- sentiment analysis for escalation prediction
+- automated ticket routing systems
+- real-time operational dashboards
+
+---
+
+# Author
+
+Data Analytics Portfolio Project
+
+Skills explored in this project may include:
+
+- exploratory data analysis
+- statistical reasoning
+- machine learning modeling
+- operational analytics
+- data storytelling
